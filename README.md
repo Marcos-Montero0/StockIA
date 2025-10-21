@@ -1,3 +1,2 @@
 "# StockIA" 
 
-hola
