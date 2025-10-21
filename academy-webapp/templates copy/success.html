@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado - SmartStock AI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .success-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid #e2e8f0;
+        }
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #dcfce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+        }
+        h1 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+        .info-box {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover { background: #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="checkmark">✅</div>
+        <h1>¡Pedido Confirmado!</h1>
+        <p style="font-size: 1.125rem;">Tu pedido ha sido enviado correctamente al proveedor.</p>
+        
+        <div class="info-box">
+            <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">
+                Recibirás una notificación cuando el pedido sea procesado.
+            </p>
+            <p style="font-weight: 600; color: #1e293b; margin-bottom: 0;">
+                Tiempo estimado de entrega: 24-48 horas
+            </p>
+        </div>
+
+        <a href="/" class="btn">Volver al Dashboard</a>
+    </div>
+</body>
+</html>
