@@ -2,6 +2,8 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
+#hola
+
 # Base de datos falsa (mock)
 PRODUCTOS = [
     {"id": 1, "nombre": "Tomates", "stock_actual": 5, "pedido_recomendado": 12, "unidad": "kg"},
