@@ -1,10 +1,16 @@
+import os
 from flask import Flask, render_template, redirect, url_for
 
-app = Flask(__name__)
+# Directorio absoluto del proyecto
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-#hola
+# Crear app Flask usando rutas absolutas
+app = Flask(
+    __name__,
+    template_folder=os.path.join(BASE_DIR, 'templates'),
+    static_folder=os.path.join(BASE_DIR, 'static')
+)
 
-# Base de datos falsa (mock)
 PRODUCTOS = [
     {"id": 1, "nombre": "Tomates", "stock_actual": 5, "pedido_recomendado": 12, "unidad": "kg"},
     {"id": 2, "nombre": "Lechuga", "stock_actual": 3, "pedido_recomendado": 5, "unidad": "uds"},
@@ -24,7 +30,6 @@ def index():
 
 @app.route('/confirmar-pedido', methods=['POST'])
 def confirmar_pedido():
-    # Aquí simulas que el pedido fue enviado
     return redirect(url_for('success'))
 
 @app.route('/success')
@@ -32,4 +37,4 @@ def success():
     return render_template('success.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)
